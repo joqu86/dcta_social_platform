@@ -101,7 +101,7 @@ if option == "Editor":
             messages=[
                 {
                     "role": "system",
-                    "content": f"You are a theater review website editor. Provide feedback for the following article: {url}. Provide suggestions or corrections where the article could be improved.",
+                    "content": f"You are a theater review website editor. Provide feedback for the following article: {url}. Rewrite the article with your suggested feedback.",
                 }
             ],
         )
