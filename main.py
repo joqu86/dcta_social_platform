@@ -20,10 +20,12 @@ spacers = "---------------------"
 st.title("DCTA Assistant AI Editor")
 
 
-option = st.sidebar.selectbox("Social", ("Social Media Manager", "Headline Creation"))
+option = st.sidebar.selectbox(
+    "Social", ("Social Media Manager", "Headline Creation", "Editor")
+)
 
 
-url = st.text_input("Insert url here: ")
+url = st.text_input("Insert here: ")
 
 
 def web_scraper():
@@ -84,6 +86,26 @@ if option == "Headline Creation":
         )
         gpt_content = completion.choices[0].message.content
         st.write("*Title Options*")
+        st.write(gpt_content)
+
+    except:
+        st.write("Include DCTA Url Above")
+if option == "Editor":
+    try:
+
+        completion = client.chat.completions.create(
+            model="gpt-4o",
+            frequency_penalty=2,
+            temperature=0.8,
+            top_p=0.8,
+            messages=[
+                {
+                    "role": "system",
+                    "content": f"You are a theater review website editor. Provide feedback for the following article: {url}. Provide suggestions or corrections where the article could be improved.",
+                }
+            ],
+        )
+        gpt_content = completion.choices[0].message.content
         st.write(gpt_content)
 
     except:
