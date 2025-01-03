@@ -69,8 +69,6 @@ if option == "Social Media Manager":
 
 if option == "Headline Creation":
     try:
-        # scrape
-        all_text, show_name, author_name, sub_header = web_scraper()
         # gpt the title
         completion = client.chat.completions.create(
             model="gpt-4o",
