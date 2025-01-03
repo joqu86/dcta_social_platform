@@ -1,2 +1,2 @@
 bs4
-openai==1.40.8
+openai
