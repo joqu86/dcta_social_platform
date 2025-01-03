@@ -101,7 +101,9 @@ if option == "Editor":
             messages=[
                 {
                     "role": "system",
-                    "content": f"You are a theater review website editor.",
+                    "content": f"You are an editor that for a website that covers theater reviews. Review the following text: {all_text}. Provide suggestions for improvement. 
+                    
+                    If present, note any content that may be considered offensive or culturally inappropriate. If not present, do not note.",
                 }
             ],
         )
