@@ -80,7 +80,7 @@ if option == "Headline Creation":
             messages=[
                 {
                     "role": "system",
-                    "content": f"You are an assistant to an theater review website editor. Create three options for headlines for the article using the following text: {all_text}.",
+                    "content": f"You are an assistant to an theater review website editor. Create three options for headlines for the article using the following text: {url}.",
                 }
             ],
         )
