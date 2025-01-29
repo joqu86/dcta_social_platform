@@ -25,7 +25,7 @@ option = st.sidebar.selectbox(
 )
 
 
-url = st.text_input("Insert here: ")
+url = st.chat_input("Insert here: ")
 
 
 def web_scraper():
